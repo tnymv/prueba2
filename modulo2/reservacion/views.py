@@ -1,5 +1,5 @@
 """Circle views."""
-
+from logica import logica
 # Django REST Framework
 from rest_framework import mixins, viewsets
 
@@ -27,6 +27,8 @@ class ClientViewSet(mixins.CreateModelMixin,
         """Restrict list to public-only."""
         queryset = Cliente.objects.all()
         return queryset
+    
+    
 
 # class CircleViewSet(viewsets.ModelViewSet):
 class HabitacionViewSet(mixins.CreateModelMixin, 
